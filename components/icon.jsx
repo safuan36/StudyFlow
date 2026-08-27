@@ -1,4 +1,4 @@
-function Icon({ name, size = 20 }) {
+export default function Icon({ name, size = 20 }) {
   const paths = {
     grid: <><rect x="3" y="3" width="7" height="7" rx="1" /><rect x="14" y="3" width="7" height="7" rx="1" /><rect x="3" y="14" width="7" height="7" rx="1" /><rect x="14" y="14" width="7" height="7" rx="1" /></>,
     check: <><rect x="3" y="3" width="18" height="18" rx="4" /><path d="m8 12 2.5 2.5L16.5 9" /></>,
@@ -12,5 +12,3 @@ function Icon({ name, size = 20 }) {
 
   return <svg className="icon" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[name]}</svg>
 }
-
-export default Icon
